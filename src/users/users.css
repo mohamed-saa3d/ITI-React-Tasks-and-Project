@@ -1,0 +1,152 @@
+/* Users List Component Styles */
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+.users__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.users__item {
+  padding: 10px 14px;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.users__button {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 12px;
+}
+
+.users__button:hover {
+  background-color: #059669;
+}
+
+.users__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+.users__message {
+  font-size: 1rem;
+  color: #ef4444;
+  margin: 8px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* AddUser / Sign In Form Styles */
+.add-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-user__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.add-user__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.add-user__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-user__group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-user__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.add-user__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: #1e293b;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.add-user__input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.add-user__button {
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #6366f1;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-user__button:hover {
+  background-color: #4f46e5;
+}
+
+.add-user__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}
+
+.add-user__link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.add-user__link:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
+
+.add-user__footer {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 20px;
+}

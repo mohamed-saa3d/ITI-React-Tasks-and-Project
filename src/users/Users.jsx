@@ -1,4 +1,5 @@
 import React from "react";
+import "./users.css";
 
 export default class Users extends React.Component {
   constructor() {
@@ -15,19 +16,19 @@ export default class Users extends React.Component {
 
   render() {
     return (
-      <>
-        <ul>
+      <div className="users">
+        <ul className="users__list">
           {this.state.isAuth ? (
-            this.state.users.map((user, index) => {
-              if (user.isAdmin) {
-                return <li key={index}>{user.name}</li>;
-              }
-            })
+            this.state.users
+              .filter((user) => user.isAdmin)
+              .map((user, index) => {
+                return <li key={index} className="users__item">{user.name}</li>;
+              })
           ) : (
-            <h1>please login first</h1>
+            <h4 className="users__message">please login first</h4>
           )}
         </ul>
-      </>
+      </div>
     );
   }
 }

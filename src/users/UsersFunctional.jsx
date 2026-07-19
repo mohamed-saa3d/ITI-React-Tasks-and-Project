@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./users.css";
 
 export default function UsersFunctional() {
     const [users, setUsers] = useState([
@@ -39,27 +40,27 @@ export default function UsersFunctional() {
     // ---------------------------------------
 
     return (
-        <>
-            <ul>
+        <div className="users">
+            <ul className="users__list">
                 {isAuth ? (
-                    users.map((user, index) => {
-                        if (user.isAdmin) {
-                            return <li key={index}>{user.name}</li>;
-                        }
-                    })
+                    users
+                        .filter((user) => user.isAdmin)
+                        .map((user, index) => {
+                            return <li key={index} className="users__item">{user.name}</li>;
+                        })
                 ) : (
-                    <h1>please login first</h1>
+                    <h4 className="users__message">please login first</h4>
                 )}
             </ul>
 
             <button
-                className="btn btn-success"
+                className="users__button"
                 onClick={() => {
                     handleToggleUsers();
                 }}
             >
                 switch users from login to logout or Opposite
             </button>
-        </>
+        </div>
     );
 }

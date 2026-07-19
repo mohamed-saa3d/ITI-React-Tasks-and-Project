@@ -1,7 +1,31 @@
-H1{
-    background-color: rgb(204, 246, 204);
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
-/* magenta */
-h6 {
-    color: magenta;
+
+.app__section {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.app__section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  text-transform: capitalize;
+}
+
+.app__section-subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #64748b;
+  margin: 0 0 16px 0;
 }

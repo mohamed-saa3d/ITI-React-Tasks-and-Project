@@ -1,4 +1,5 @@
 import React from 'react';
+import './navbar.css';
 
 export default class Navbar extends React.Component {
 
@@ -20,7 +21,7 @@ export default class Navbar extends React.Component {
         console.log("Navbar componentDidUpdate"); //5
     }
 
-componentWillUnmount() {
+    componentWillUnmount() {
         console.log("Navbar componentWillUnmount"); //6 clean up
     }
 
@@ -28,11 +29,11 @@ componentWillUnmount() {
         console.log("Navbar render"); //2
         return (
             <nav className="navbar">
-                <h1 className="navbar-title">My React App(navbar)</h1>
+                <h1 className="navbar__title">My React App(navbar)</h1>
             </nav>
         );
     }   
-                }
+}
     
 // الترقيم دا هو ترتيب الاوتبوت عشان لما بيتم استدعاء الكونستركتور الاول وبعدها الريندر وبعدها الكومبوننت دايد ماونت
 // 1- بيتم استدعاء الكونستركتور الاول عشان يجهز الكومبوننت بالبيانات اللي محتاجها
@@ -41,14 +42,14 @@ componentWillUnmount() {
 // يعني باختصار لازم الديدماونت يكون بعد الريندر عشان اضمن ان الكومبوننت تم عرضه في المتصفح قبل ما ابدأ اشتغل في اي حاجه تانيه بعد العرض 
 /**
  * نعرض الكومبوننت أولاً (حتى لو فاضي أو فيه Loading)، وبعدين نجيب الداتا في componentDidMount.
- * لماذا نعمل كده？
-
+ * لماذا نعمل كده؟
+ 
 React يحب يرسم الكومبوننت أولاً (render).
 componentDidMount يشتغل مرة واحدة فقط بعد أول render.
 لما نغير الـ state بـ this.setState()، React بيعمل re-render مرة تانية (مع الداتا الجديدة).
-
+ 
 يعني:
-
+ 
 Render 1 → يظهر "جاري التحميل..."
 componentDidMount → يجيب الداتا
 Render 2 → يظهر الداتا النهائية
