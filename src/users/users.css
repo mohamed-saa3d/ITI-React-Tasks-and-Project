@@ -144,6 +144,24 @@
   text-decoration: underline;
 }
 
+.text-danger {
+  display: block;
+  margin-top: 6px;
+  color: #dc3545;
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-height: 18px;
+}
+
+.add-user__input--error {
+  border-color: #dc3545 !important;
+}
+
+.add-user__input--error:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2) !important;
+}
+
 .add-user__footer {
   font-size: 0.875rem;
   color: #64748b;
