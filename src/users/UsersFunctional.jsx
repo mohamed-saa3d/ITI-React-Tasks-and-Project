@@ -72,6 +72,7 @@ export default function UsersFunctional() {
                     className={`btn btn-block ${isAuth ? 'btn-outline' : 'btn-primary'}`}
                     onClick={() => {
                         handleToggleUsers();
+                        setUsers([]);
                     }}
                 >
                     {isAuth ? "Logout" : "Login"} (Switch Auth State)
