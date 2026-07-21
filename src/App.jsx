@@ -16,20 +16,24 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<Products />} />
-          <Route path="/products/:id/:name" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/users-functional" element={<UsersFunctional />} />
-          <Route path="/add-user" element={<AddUser />} />
-        </Routes>
+      <div className="app-wrapper">
+        <div className="app-container">
+          <Header />
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:id" element={<Products />} />
+              <Route path="/products/:id/:name" element={<Products />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/users-functional" element={<UsersFunctional />} />
+              <Route path="/add-user" element={<AddUser />} />
+            </Routes>
+          </main>
+        </div>
       </div>
     </Router>
   );

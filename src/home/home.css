@@ -1,0 +1,151 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home-hero {
+    padding: 3rem 2rem;
+  }
+}
+
+.home-hero-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  .home-hero-title {
+    font-size: 3rem;
+  }
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.home-hero-desc {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 42rem;
+  margin: 0 auto 2rem auto;
+}
+
+.home-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.home-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.home-section-text {
+  color: var(--text-muted);
+  line-height: 1.625;
+}
+
+.home-section-link {
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.home-section-link:hover {
+  text-decoration: underline;
+}
+
+.home-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background-color: var(--background);
+  color: var(--text);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.home-projects {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .home-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.project-card-image {
+  height: 8rem;
+  background-color: var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+}
+
+.project-card-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.project-card-desc {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}

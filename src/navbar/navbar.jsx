@@ -29,40 +29,40 @@ export default class Navbar extends React.Component {
     render() {
         console.log("Navbar render"); //2
         return (
-            <nav className="navbar">
-                <ul className="navbar__list">
-                    <li className="navbar__item">
-                        <NavLink to="/" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+            <nav className="card navbar">
+                <ul className="navbar-list">
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Home
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/users" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/users" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Users
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/users-functional" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/users-functional" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Functional Users
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/add-user" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/add-user" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Add User
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/products" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/products" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Products
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/about" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             About
                         </NavLink>
                     </li>
-                    <li className="navbar__item">
-                        <NavLink to="/contact" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                    <li>
+                        <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             Contact
                         </NavLink>
                     </li>

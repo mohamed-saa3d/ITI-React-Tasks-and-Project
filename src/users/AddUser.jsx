@@ -83,13 +83,16 @@ export default function AddUser() {
   };
 
   return (
-    <div className="add-user">
-      <h2 className="add-user__title">Add User</h2>
+    <div className="users-container max-w-sm mx-auto">
+      <div className="users-header">
+        <h2 className="users-title">Add New User</h2>
+        <p className="users-subtitle">Fill in the form to create a new user profile</p>
+      </div>
 
       {/* Disable browser's default validation using noValidate */}
-      <form className="add-user__form" onSubmit={handleSubmit} noValidate>
-        <div className="add-user__group">
-          <label htmlFor="name" className="add-user__label">
+      <form className="card add-user-form" onSubmit={handleSubmit} noValidate>
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">
             Name
           </label>
 
@@ -100,15 +103,15 @@ export default function AddUser() {
             placeholder="Enter your name"
             value={user.name}
             onChange={handleChange}
-            className={`add-user__input ${errors.name ? "add-user__input--error" : ""}`}
+            className={`form-input ${errors.name ? "input-error" : ""}`}
           />
-          <small className="text-danger">
-            {errors.name}
-          </small>
+          {errors.name && (
+            <p className="form-error-text">{errors.name}</p>
+          )}
         </div>
 
-        <div className="add-user__group">
-          <label htmlFor="email" className="add-user__label">
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">
             Email
           </label>
 
@@ -119,27 +122,17 @@ export default function AddUser() {
             placeholder="Enter your email"
             value={user.email}
             onChange={handleChange}
-            className={`add-user__input ${errors.email ? "add-user__input--error" : ""}`}
+            className={`form-input ${errors.email ? "input-error" : ""}`}
           />
-          <small className="text-danger">
-            {errors.email}
-          </small>
+          {errors.email && (
+            <p className="form-error-text">{errors.email}</p>
+          )}
         </div>
 
-        <button type="submit" className="add-user__button">
+        <button type="submit" className="btn btn-primary btn-block form-submit">
           Save User
         </button>
       </form>
-
-      {/* <div className="add-user__footer">
-        <p>
-          <strong>Name:</strong> {user.name}
-        </p>
-
-        <p>
-          <strong>Email:</strong> {user.email}
-        </p>
-      </div> */}
     </div>
   );
 }

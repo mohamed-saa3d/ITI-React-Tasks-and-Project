@@ -16,18 +16,37 @@ export default class Users extends React.Component {
 
   render() {
     return (
-      <div className="users">
-        <ul className="users__list">
-          {this.state.isAuth ? (
-            this.state.users
-              .filter((user) => user.isAdmin)
-              .map((user, index) => {
-                return <li key={index} className="users__item">{user.name}</li>;
-              })
-          ) : (
-            <h4 className="users__message">please login first</h4>
-          )}
-        </ul>
+      <div className="users-container">
+        <div className="users-header">
+          <h1 className="users-title">Class Component Users</h1>
+          <p className="users-subtitle">Showing only admin users</p>
+        </div>
+        
+        <div className="card users-card">
+          <ul className="users-list">
+            {this.state.isAuth ? (
+              this.state.users
+                .filter((user) => user.isAdmin)
+                .map((user, index) => {
+                  return (
+                    <li key={index} className="user-item">
+                      <div className="user-avatar user-avatar-indigo">
+                        {user.name.charAt(0).toUpperCase()}
+                      </div>
+                      <div className="user-info">
+                        <p className="user-name">{user.name}</p>
+                        <p className="user-meta">Admin Role • Age: {user.age}</p>
+                      </div>
+                    </li>
+                  );
+                })
+            ) : (
+              <div className="user-message-error">
+                Please login first
+              </div>
+            )}
+          </ul>
+        </div>
       </div>
     );
   }
