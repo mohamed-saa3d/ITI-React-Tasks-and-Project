@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
 export default class Navbar extends React.Component {
@@ -29,7 +30,43 @@ export default class Navbar extends React.Component {
         console.log("Navbar render"); //2
         return (
             <nav className="navbar">
-                <h1 className="navbar__title">My React App(navbar)</h1>
+                <ul className="navbar__list">
+                    <li className="navbar__item">
+                        <NavLink to="/" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Home
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/users" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Users
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/users-functional" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Functional Users
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/add-user" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Add User
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/products" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Products
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/about" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            About
+                        </NavLink>
+                    </li>
+                    <li className="navbar__item">
+                        <NavLink to="/contact" className={({ isActive }) => isActive ? "navbar__link active" : "navbar__link"}>
+                            Contact
+                        </NavLink>
+                    </li>
+                </ul>
             </nav>
         );
     }   

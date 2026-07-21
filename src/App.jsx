@@ -1,32 +1,37 @@
-import Navbar from './navbar/Navbar'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './header/header';
+import Navbar from './navbar/Navbar';
+
+import Home from './home/home';
+import About from './about/about';
+import Products from './products/products';
+import Contact from './contact/contact';
 import Users from './users/Users';
-import AddUser from './users/AddUser';
 import UsersFunctional from './users/UsersFunctional';
+import AddUser from './users/AddUser';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      
-      <div className="app__section">
-        <h3 className="app__section-title">this is class component</h3>
-        <h6 className="app__section-subtitle">(this users are admin && logged in -isAuth-)</h6>
-        <Users />
+    <Router>
+      <div className="app">
+        <Header />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<Products />} />
+          <Route path="/products/:id/:name" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users-functional" element={<UsersFunctional />} />
+          <Route path="/add-user" element={<AddUser />} />
+        </Routes>
       </div>
-
-      <div className="app__section">
-        <h3 className="app__section-title">this is functional component</h3>
-        <h6 className="app__section-subtitle">(this users are admin && logged in -isAuth-)</h6>
-        <UsersFunctional />
-      </div>
-
-      <div className="app__section">
-        <h3 className="app__section-title">this is add user form</h3>
-        <h6 className="app__section-subtitle">(this users are admin && logged in -isAuth-)</h6>
-        <AddUser />
-      </div>
-    </div>
+    </Router>
   );
 }
 

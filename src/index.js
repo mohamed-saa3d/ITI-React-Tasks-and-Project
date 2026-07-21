@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* Virtual DOM */}
-<h1>Welcome to React</h1>
+<h3>Welcome to React</h3>
     <App />
   </React.StrictMode>
 );
