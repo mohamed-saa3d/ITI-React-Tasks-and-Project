@@ -6,6 +6,7 @@ import Navbar from './navbar/navbar.jsx';
 import Home from './home/home';
 import About from './about/about';
 import Products from './products/products';
+import ProductDetails from './products/ProductDetails'; 
 import Contact from './contact/contact';
 import Users from './users/Users';
 import UsersFunctional from './users/UsersFunctional';
@@ -25,8 +26,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/products/:id" element={<Products />} />
-              <Route path="/products/:id/:name" element={<Products />} />
+              <Route path="/products/:id" element={<ProductDetails />} />
+              <Route path="/products/:id/:name" element={<ProductDetails />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/users" element={<Users />} />
               <Route path="/users-functional" element={<UsersFunctional />} />
