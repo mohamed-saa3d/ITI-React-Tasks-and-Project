@@ -1,11 +1,13 @@
 # ITI React Tasks & Portfolio Project
 
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+
 A comprehensive React learning project built while completing the **ITI React Course**.  
 This repository contains all course tasks, practical exercises, and a small portfolio application that helped reinforce React fundamentals and modern development practices.
 
 ## Live Demo
 
-🔗 https://iti-react-tasks-and-project-beta.vercel.app/
+🔗 https://iti-react-tasks-and-project.vercel.app/
 
 ---
 
