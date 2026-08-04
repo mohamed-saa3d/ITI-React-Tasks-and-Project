@@ -1,6 +1,10 @@
 # ITI React Tasks & Portfolio Project
 
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite)
+![React Router](https://img.shields.io/badge/React_Router-7-red?logo=reactrouter)
+![Axios](https://img.shields.io/badge/Axios-HTTP_API-blueviolet)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 A comprehensive React learning project built while completing the **ITI React Course**.  
 This repository contains all course tasks, practical exercises, and a small portfolio application that helped reinforce React fundamentals and modern development practices.
