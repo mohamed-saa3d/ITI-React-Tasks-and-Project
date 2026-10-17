@@ -50,6 +50,16 @@
   color: var(--text);
 }
 
+/* لينك العنوان جوه الكارد */
+.project-item-link {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.project-item-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
 .project-item-desc {
   color: var(--text-muted);
   line-height: 1.5;
@@ -83,6 +93,22 @@
   padding: 2rem;
 }
 
+/* حالة التحميل والخطأ في صفحة المنتجات */
+.products-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 2rem 0;
+}
+
+.products-state-error {
+  color: var(--danger);
+}
+
+.project-details-actions {
+  margin-top: 1.5rem;
+}
 .project-details-title {
   font-size: 1.875rem;
   font-weight: 700;

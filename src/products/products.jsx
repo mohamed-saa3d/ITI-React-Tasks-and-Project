@@ -1,19 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchProducts } from "./fetchProducts";
-import { projects } from "./projects";
 import ProductCard from "./ProductCard";
 import "./products.css";
 
 const Products = () => {
+  // 1) الحالة: الداتا اللي جاية من الباك + التحميل + الخطأ
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // 2) أول ما الصفحة تفتح بنجيب المنتجات من الباك الوهمي
   useEffect(() => {
-    fetchProducts();
+    const loadProducts = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchProducts();
+        setProducts(data);
+      } catch (err) {
+        setError("Failed to load products, please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
   }, []);
 
   return (
-    <><h1>Fetching Products...</h1>
-    {/* هنا هظهر المنتجات اللي جايه من الباك
-    علشان انا بستخدم async await فالصفحة مش هتتعرض غير لما يجيب المنتجات
-    ولازم فصل واضح بينها وبين التمبليت اللي مجرد ui فقد */}
     <div className="products-container">
           <div className="products-header">
               <h1 className="products-title">Portfolio Projects</h1>
@@ -22,12 +35,19 @@ const Products = () => {
               </p>
           </div>
 
-          <div className="products-grid">
-              {projects.map((project) => (
-                  <ProductCard project={project} />
-              ))}
-          </div>
-      </div></>
+          {/* هنا هظهر المنتجات اللي جايه من الباك */}
+          {loading && <h2 className="products-state">Fetching Products...</h2>}
+
+          {error && <h2 className="products-state products-state-error">{error}</h2>}
+
+          {!loading && !error && (
+              <div className="products-grid">
+                  {products.map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                  ))}
+              </div>
+          )}
+      </div>
   );
 };
 

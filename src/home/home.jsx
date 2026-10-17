@@ -1,3 +1,4 @@
+import { projects } from "../products/projects";
 import "./home.css";
 
 export default function Home() {
@@ -48,12 +49,17 @@ export default function Home() {
                     <span className="home-section-link">View All</span>
                 </div>
                 <div className="home-projects">
-                    {[1, 2, 3].map(item => (
-                        <div key={item} className="project-card">
+                    {/* هنا بنعرض التمبليتس الجاهزة اللي في الكود (ملف projects.js) */}
+                    {projects.map(project => (
+                        <div key={project.title} className="project-card">
                             <div className="project-card-image"></div>
-                            <h3 className="project-card-title">Project {item}</h3>
-                            <p className="project-card-desc">A brief description of this amazing project and what it does.</p>
-                            <span className="badge badge-primary">React</span>
+                            <h3 className="project-card-title">{project.title}</h3>
+                            <p className="project-card-desc">{project.desc}</p>
+                            {project.tech.map(tech => (
+                                <span key={tech} className="badge badge-primary">
+                                    {tech}
+                                </span>
+                            ))}
                         </div>
                     ))}
                 </div>
