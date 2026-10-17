@@ -60,27 +60,12 @@
   color: var(--primary);
   text-decoration: underline;
 }
+
 .project-item-desc {
   color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1;
-}
-
-.project-item-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tech-tag {
-  background-color: var(--background);
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius-sm);
 }
 
 .project-item-actions {
@@ -109,6 +94,7 @@
 .project-details-actions {
   margin-top: 1.5rem;
 }
+
 .project-details-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -136,4 +122,61 @@
 
 .project-details-info strong {
   color: var(--text);
+}
+
+/* ===== Pagination ===== */
+
+/* النص اللي بيقول للمستخدم بيشوف إيه من إيه */
+.pagination-info {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* شريط أزرار الباجينيشن */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* الزر الواحد */
+.pagination-btn {
+  min-width: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--surface);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: var(--background);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* الصفحة الحالية */
+.pagination-btn-active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.pagination-btn-active:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: white;
+}
+
+/* Prev و Next لما يكونوا مش شغالين */
+.pagination-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
